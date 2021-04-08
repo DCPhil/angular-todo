@@ -1,11 +1,10 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, tap, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { MessageService } from './message.service';
 import { Task } from './task';
-import { isNgTemplate } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -20,11 +19,21 @@ export class TaskService {
 
   constructor(private messageService: MessageService, private http: HttpClient) { }
 
-  getTasks():Observable<Task[]> {
+  //getTasks():Observable<Task[]> {
+  //  return this.http.get<Task[]>(this.tasksUrl)
+  //    .pipe(
+  //      tap(_ => this.log('Tasks fetched')),
+  //      catchError(this.handleError<Task[]>('getTasks', []))
+  //    );
+  //}
+
+  getTasks(priority: string): Observable<Task[]> {
+    console.log(priority);
     return this.http.get<Task[]>(this.tasksUrl)
       .pipe(
         tap(_ => this.log('Tasks fetched')),
-        catchError(this.handleError<Task[]>('getTasks', []))
+        catchError(this.handleError<Task[]>('getTasks', [])),
+        map(taskObj => taskObj.filter(filterObj => filterObj.priority == priority))
       );
   }
 

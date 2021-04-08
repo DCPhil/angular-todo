@@ -1,0 +1,26 @@
+<table>
+    <tr>
+        <th>
+            Top Daily Tasks
+            <tr *ngFor="let task of dailyTasks">
+                <td><input type="checkbox" [(ngModel)]="task.checked" (change)="checkUncheck(task)" /></td>
+                <td>{{ task.name }}</td>
+            </tr>
+            <tr>
+        </th>
+        <th>
+            Top Weekly Tasks
+            <tr *ngFor="let task of weeklyTasks">
+                <td><input type="checkbox" [(ngModel)]="task.checked" (change)="checkUncheck(task)" /></td>
+                <td>{{ task.name }}</td>
+            </tr>
+        </th>
+        <th>
+            Top Monthly Tasks
+            <tr *ngFor="let task of monthlyTasks">
+                <td><input type="checkbox" [(ngModel)]="task.checked" (change)="checkUncheck(task)" /></td>
+                <td>{{ task.name }}</td>
+            </tr>
+        </th>
+    </tr>
+</table>
