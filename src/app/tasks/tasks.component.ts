@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { Task } from '../task';
@@ -11,8 +11,6 @@ import {TaskService } from '../task.service';
 })
 export class TasksComponent implements OnInit {
 
-  
-
   tasks: Task[] = [];
   filteredTasks: Task[] = [];
   priority: string;
@@ -24,12 +22,12 @@ export class TasksComponent implements OnInit {
   }
 
   getTasks(): void {
-    this.route.queryParams
+    this.route.params
         .subscribe(params => {
-          this.priority = params.priority;
+          this.priority = params.ref1;
+          this.taskService.getTasks(this.priority)
+            .subscribe(tasks => {this.tasks = tasks; this.filteredTasks = tasks});
         });
-    this.taskService.getTasks(this.priority)
-      .subscribe(tasks => {this.tasks = tasks; this.filteredTasks = tasks});
   }
 
 }

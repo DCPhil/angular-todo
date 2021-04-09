@@ -28,13 +28,20 @@ export class TaskService {
   //}
 
   getTasks(priority: string): Observable<Task[]> {
-    console.log(priority);
+    if(priority == "all") {
+      return this.http.get<Task[]>(this.tasksUrl)
+        .pipe(
+          tap(_ => this.log('Tasks fetched')),
+          catchError(this.handleError<Task[]>('getTasks', []))
+        );
+    } else {
     return this.http.get<Task[]>(this.tasksUrl)
       .pipe(
         tap(_ => this.log('Tasks fetched')),
         catchError(this.handleError<Task[]>('getTasks', [])),
         map(taskObj => taskObj.filter(filterObj => filterObj.priority == priority))
       );
+    }
   }
 
   getTask(id: number): Observable<Task> {

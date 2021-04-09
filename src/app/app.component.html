@@ -1,8 +1,9 @@
 <h1>{{ title }}</h1>
 <nav>
-    <a routerLink="/dashboard">Dashboard</a>
-    <a routerLink="/tasks" [queryParams]="{priority: 'daily'}">Tasks</a>
-    <a routerLink="/tasks" [queryParams]="{priority: 'weekly'}">Tasks</a>
-    <a routerLink="/tasks" [queryParams]="{priority: 'monthly'}">Tasks</a>
+    <a routerLink="/dashboard"> Dashboard </a>
+    <a [routerLink]="['/test', {ref1: 'daily'}]"> Daily </a>
+    <a [routerLink]="['/test', {ref1: 'weekly'}]"> Weekly </a>
+    <a [routerLink]="['/test', {ref1: 'monthly'}]"> Monthly </a>
+    
 </nav>
 <router-outlet></router-outlet>

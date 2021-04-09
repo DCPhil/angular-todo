@@ -25,7 +25,7 @@ export class DashboardComponent implements OnInit {
   getTasks(): void {
     this.loadingTasks = true;
     this.tasks = [];
-    this.taskService.getTasks()
+    this.taskService.getTasks("all")
       .subscribe (
         tasks => this.tasks = tasks,
         err => console.error(err),
