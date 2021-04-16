@@ -9,15 +9,20 @@ export class InMemoryDataService implements InMemoryDbService{
 
   createDb() {
     const tasks = [
-      {id: 1, name: 'exersice', priority: 'daily', checked: false, note: 'marathon training' },
+      {id: 1, name: 'exersice', priority: 'daily', checked: false, note: 'short marathon training' },
       {id: 2, name: 'coding', priority: 'daily', checked: false, note: 'practice coding' },
-      {id: 3, name: 'pets', priority: 'daily', checked: false, note: 'medicate dog and cat' },
-      {id: 4, name: 'gardening', priority: 'weekly', checked: false, note: 'mow lawn' },
-      {id: 5, name: 'shopping', priority: 'weekly', checked: false, note: 'grocery shopping' },
+      {id: 3, name: 'kids', priority: 'daily', checked: false, note: 'review homework' },
+      {id: 4, name: 'dog', priority: 'daily', checked: false, note: 'walk and train dog' },
+      {id: 5, name: 'relax', priority: 'daily', checked: false, note: 'meditate' },
       {id: 6, name: 'cars', priority: 'weekly', checked: false, note: 'wash cars' },
-      {id: 7, name: 'cleaing', priority: 'monthly', checked: false, note: 'house cleaning' },
-      {id: 8, name: 'solar', priority: 'monthly', checked: false, note: 'clean solar panels' },
-      {id: 9, name: 'bills', priority: 'monthly', checked: false, note: 'pay bills' },
+      {id: 7, name: 'shopping', priority: 'weekly', checked: false, note: 'grocery shopping' },
+      {id: 8, name: 'gardening', priority: 'weekly', checked: false, note: 'mow lawn' },
+      {id: 9, name: 'exersice', priority: 'weekly', checked: false, note: 'long marathon training' },
+      {id: 10, name: 'kids', priority: 'weekly', checked: false, note: 'help w/ school projects' },
+      {id: 11, name: 'cleaing', priority: 'monthly', checked: false, note: 'house cleaning' },
+      {id: 12, name: 'solar', priority: 'monthly', checked: false, note: 'clean solar panels' },
+      {id: 13, name: 'pets', priority: 'monthly', checked: false, note: 'medicate dog and cats' },
+      {id: 14, name: 'bills', priority: 'monthly', checked: false, note: 'pay bills' },
     ];
     return {tasks};
   }

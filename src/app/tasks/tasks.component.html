@@ -1,14 +1,12 @@
-<table>
+<table class="table">
     <tr>
         <th>Completed</th>
         <th>Name</th>
-        <th>Priority</th>
         <th>Note</th>
     </tr>
 <tr *ngFor="let task of filteredTasks">
-    <td><input type="checkbox" [(ngModel)]="task.checked" /></td>
+    <td><input type="checkbox" [(ngModel)]="task.checked" (change)="checkUncheck(task)" /></td>
     <td>{{ task.name }}</td>
-    <td>{{ task.priority }}</td>
     <td>{{ task.note }}</td>
 </tr>
 </table>

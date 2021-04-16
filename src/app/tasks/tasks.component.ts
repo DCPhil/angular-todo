@@ -30,4 +30,9 @@ export class TasksComponent implements OnInit {
         });
   }
 
+  checkUncheck(task: Task): void {
+    this.taskService.updateTask(task)
+      .subscribe(() => this.getTasks());
+  }
+
 }

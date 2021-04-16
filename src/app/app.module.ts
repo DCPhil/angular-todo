@@ -10,12 +10,14 @@ import { InMemoryDataService } from './in-memory-data.service';
 import { TasksComponent } from './tasks/tasks.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TasksComponent,
-    DashboardComponent
+    DashboardComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,

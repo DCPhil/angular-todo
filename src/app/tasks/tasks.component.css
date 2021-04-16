@@ -1,0 +1,95 @@
+/* HeroesComponent's private CSS styles */
+.tasks {
+    margin: 0 0 2em 0;
+    list-style-type: none;
+    padding: 0;
+    width: 15em;
+  }
+
+  .task-input {
+    width: auto;
+    margin: 0;
+  }
+  
+  input {
+    display: block;
+    width: 100%;
+    padding: .5rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+  }
+  
+  .tasks li {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .tasks li:hover {
+    left: .1em;
+  }
+  
+  .tasks a {
+    color: #333;
+    text-decoration: none;
+    background-color: #EEE;
+    margin: .5em;
+    padding: .3em 0;
+    height: 1.6em;
+    border-radius: 4px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .tasks a:hover {
+    color: #2c3a41;
+    background-color: #e6e6e6;
+  }
+  
+  .tasks a:active {
+    background-color: #525252;
+    color: #fafafa;
+  }
+
+  .task-add {
+    display: inline-flex;
+    align-items: center;
+  }
+  .task-add label {
+    min-width: fit-content;
+  }
+
+  .table {
+    display: inline-table;
+  }
+
+  .table tr th {
+      padding: 5px;
+  }
+  .table tr td {
+    padding: 5px;
+    }
+  
+  .add-button {
+   padding: .5rem 1.5rem;
+   font-size: 1rem;
+   margin-bottom: 2rem;
+  }
+  
+  .add-button:hover {
+    color: white;
+    background-color: #42545C;
+  }
+
+  .checkbox {
+    cursor: alias;
+  }
+  
+  button.delete {
+    cursor: pointer;
+  }
+  
+  button.delete:hover {
+    background-color: #525252;
+    color: white;
+  }
