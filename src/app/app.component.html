@@ -1,9 +1,9 @@
 <h1>{{ title }}</h1>
 <nav>
     <a routerLink="/dashboard"> Dashboard </a>
-    <a [routerLink]="['/test', {ref1: 'daily'}]"> Daily </a>
-    <a [routerLink]="['/test', {ref1: 'weekly'}]"> Weekly </a>
-    <a [routerLink]="['/test', {ref1: 'monthly'}]"> Monthly </a>
+    <a [routerLink]="['/tasks', {ref1: 'daily'}]"> Daily </a>
+    <a [routerLink]="['/tasks', {ref1: 'weekly'}]"> Weekly </a>
+    <a [routerLink]="['/tasks', {ref1: 'monthly'}]"> Monthly </a>
     
 </nav>
 <router-outlet></router-outlet>

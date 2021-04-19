@@ -6,7 +6,11 @@
     </tr>
 <tr *ngFor="let task of filteredTasks">
     <td><input type="checkbox" [(ngModel)]="task.checked" (change)="checkUncheck(task)" /></td>
-    <td>{{ task.name }}</td>
+    <td>
+        <a routerLink="/detail/{{ task.id }}">
+            <span>{{ task.name }}</span>
+        </a>
+    </td>
     <td>{{ task.note }}</td>
 </tr>
 </table>

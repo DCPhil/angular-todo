@@ -1,1 +1,33 @@
-<p>task-detail works!</p>
+<div *ngIf="task">
+    <h2>{{ task.name | uppercase }} Details</h2>
+    <table class="table">
+        <tr>
+            <td>
+                <label for="task-name">Task name: </label>
+            </td>
+            <td>
+                <input id="task-name" [(ngModel)]="task.name" placeholder="name" />
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="task-priority">Task priority: </label>
+            </td>
+            <td>
+                <input id="task-priority" [(ngModel)]="task.priority" placeholder="priority" />
+            </td>
+        </tr>
+        <br>
+        <tr>
+            <td>
+                <label for="task-note">Task note: </label>
+            </td>
+            <td>
+                <input id="task-note" [(ngModel)]="task.note" placeholder=" ote" />
+            </td>
+        </tr>
+    </table>
+</div>
+<button (click)="goBack()">Go Back</button>
+<button (click)="saveTask()">Save Task</button>
